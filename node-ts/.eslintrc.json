@@ -1,0 +1,37 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "indent": ["error", 2],
+    "no-empty": "warn",
+    "no-cond-assign": ["error", "always"],
+    "no-mixed-spaces-and-tabs": "error",
+    "array-callback-return": ["error", { "allowImplicit": true }],
+    "linebreak-style": ["error", "unix"],
+    "max-depth": ["error", 4],
+    "key-spacing": ["error", { "afterColon": true }],
+    "dot-location": ["error", "property"],
+    "max-len": ["error", { "code": 80, "tabWidth": 2 }],
+    "quotes": ["error", "single"],
+    "new-cap": ["error", { "newIsCap": true }],
+    "line-comment-position": ["error", { "position": "above" }],
+    "semi": ["error", "never"],
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "no-trailing-spaces": [
+      "error",
+      { "skipBlankLines": true, "ignoreComments": true }
+    ],
+    "arrow-body-style": [
+      "error",
+      "as-needed",
+      { "requireReturnForObjectLiteral": false }
+    ],
+    "no-duplicate-imports": ["error", { "includeExports": true }]
+  }
+}
