@@ -1,3 +1,18 @@
+# Step 1: Installation
+
+- Install eslint dependencies
+
+```
+  npm install --save-dev eslint
+
+  yarn add --dev eslint
+```
+
+# Step 2: Configuration
+
+- Create a .eslintrc.json config file in the root of your project, and populate it with the code
+
+```json
 {
   "env": {
     "commonjs": true,
@@ -34,3 +49,36 @@
     "no-duplicate-imports": ["error", { "includeExports": true }]
   }
 }
+```
+
+# Step 3: Configuration Prettier
+
+- Create a .prettierrc.json config file in the root of your project, and populate it with the code
+
+```json
+{
+  "printWidth": 80,
+  "tabWidth": 2,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "arrowParens": "always",
+  "semi": false,
+  "arraySeparator": true
+}
+```
+
+# Step 4: Configuration script
+
+- Configure lint in your package.json and lint your code
+
+```json
+"scripts": {
+  "lint": "eslint . --ext .ts"
+}
+
+```
+
+- You can use npm run lint for find errors in your code
+- And you can use npm run lint --fix for find and fix erros in your code
+
+### OBS: you must install eslint and prettier extension in your vscode
